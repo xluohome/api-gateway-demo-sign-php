@@ -32,4 +32,8 @@ class SystemHeader {
     const X_CA_NONCE = "X-Ca-Nonce";
     //APP KEY
     const X_CA_KEY = "X-Ca-Key";
+	//请求 API的Stage，目前支持 TEST、PRE、RELEASE 三个 Stage，大小写不敏感，API 提供者可以选择发布到哪个 Stage，只有发布到指定 Stage 后 API //才可以调用，否则会提示 API 找不到或 Invalid Url。
+	const X_CA_STAG="X-Ca-Stage";
+	////是否开启 Debug 模式，大小写不敏感，不设置默认关闭，一般 API 调试阶段可以打开此设置
+	const X_CA_REQUEST_MODE="X-Ca-Request-Mode";
 }
